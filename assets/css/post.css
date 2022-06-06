@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* single */
+/*--------------------------------------
+	詳細ページ用
+--------------------------------------*/
+a[target="_blank"] { margin-right: 8px; padding-right: 18px; background: url(../img/icon-blanklink.png) right 2px no-repeat; background-size: 15px 15px; }
+
+/* フロート */
+div.aligncenter, img.aligncenter { display: block; width: 100%; max-width: 800px; margin: 1.5em auto 40px auto; }
+div.alignnone, img.alignnone { display: block; margin: 0 auto 40px auto; }
+div.alignleft, img.alignleft { float: left; width: auto; max-width: 500px; margin: 1.5em 30px 40px 0; }
+div.alignright, img.alignright { float: right; width: auto; max-width: 500px; margin: 1.5em 0 40px 30px; }
+
+.content-tit { font-size: 1.625rem; font-weight: 500; font-family: "Times New Roman", "serif", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "メイリオ", Meiryo; }
+@media screen and (min-width: 769px) { .content-tit { font-size: 1.875rem; } }
+
+/* 記事日付 */
+.post-meta { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; margin-top: 1.0em; }
+.post-meta li { width: 100%; text-align: left; padding: 5px 0; }
+.post-meta li a { text-decoration: none; }
+.post-meta li::before { content: ""; font-family: "Font Awesome 5 Free"; font-size: 14px; color: #fff; margin-right: 5px; }
+.post-meta li.date::before { content: "\f017"; }
+.post-meta li.cat::before { content: "\f07b"; }
+
+/* タグスタイル */
+.post-body { margin: 60px 0; /* 見出し */ }
+.post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body dt { line-height: 1.4; text-align: left; clear: both; }
+.post-body h2 { font-size: 1.75rem; border-bottom: 3px dotted #eee; padding: .5em 4% 5px; margin: 1.5em -4% 0; }
+@media screen and (min-width: 769px) { .post-body h2 { padding: 0 5px 5px; margin: 2.0em 0 0; } }
+.post-body h3 { font-size: 1.625rem; padding: .5em 4% 5px; margin: 1.5em -4% 0; position: relative; }
+.post-body h3::before { content: ""; display: inline-block; width: 100px; height: 1px; border-top: 1px solid #3fb7eb; position: absolute; top: 0; left: 0; }
+@media screen and (min-width: 769px) { .post-body h3 { padding: .5em 18px 5px; margin: 2.0em 0 0; } }
+.post-body h4 { font-size: 1.375rem; margin: 1.5em 0 0; position: relative; color: #3fb7eb; }
+@media screen and (min-width: 769px) { .post-body h4 { margin: 2.0em 0 0; } }
+.post-body h5 { font-size: 1.125rem; margin: 1.5em 0 0; color: #fff; }
+@media screen and (min-width: 769px) { .post-body h5 { margin: 2.0em 0 0; } }
+.post-body a img { border: 2px solid #fff; }
+.post-body a img:hover { border: 2px solid #3fb7eb; }
+.post-body p { font-size: 0.9375rem; line-height: 1.6; text-align: left; margin-top: 1.5em; }
+.post-body .box { margin-top: 1.5em; }
+.post-body ul, .post-body ol { margin: 1.5em 0 0 5px; text-align: left; padding-left: 1.5em; }
+.post-body ul li, .post-body ol li { font-size: 0.9375rem; line-height: 1.6; position: relative; clear: both; }
+.post-body ul li + li, .post-body ol li + li { margin-top: 20px; }
+.post-body ul li ul, .post-body ol li ul { margin-top: 20px !important; }
+@media screen and (min-width: 769px) { .post-body ul li, .post-body ol li { font-size: 1rem; } }
+.post-body ul li::before { content: ""; position: absolute; width: 17px; height: 17px; border: 4px solid #3fb7eb; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; top: 7px; margin-left: -1.5em; }
+.post-body ul li.blue::before { border: 4px solid #334e95; }
+.post-body ul.blocks-gallery-grid li::before { content: ""; border: none !important; width: 0; height: 0; }
+.post-body ol { counter-reset: mynmb; }
+.post-body ol > li::before { position: absolute; counter-increment: mynmb; content: counter(mynmb) "."; color: #3fb7eb; width: 24px; height: 24px; margin-left: -30px; font-size: 18px; line-height: 24px; top: 3px; left: 0; text-align: center; }
+.post-body dl { margin: 1.5em -4% 0; border-top: 1px solid #3fb7eb; border-bottom: 2px solid #3fb7eb; font-size: 0.9375rem; }
+.post-body dl dt { padding: 18px 4% 0 calc(4% + 20px); border-top: 1px solid #3fb7eb; position: relative; text-align: left; font-weight: 700; }
+.post-body dl dt::before { content: ""; width: 11px; height: 11px; background-color: #3fb7eb; position: absolute; top: 15px; left: 4%; }
+.post-body dl dd { padding: 18px 4% 18px calc(4% + 20px); clear: both; text-align: left; line-height: 1.7; }
+.post-body dl dd p:first-child, .post-body dl dd ul:first-child, .post-body dl dd ol:first-child { margin-top: 0; }
+
+/* WPblock */
+.wp-block-table tbody th { min-width: 20%; }
+.wp-block-table tbody td { background-color: transparent !important; }
+
+.wp-block-image { margin-top: 1.5em; }
+
+/* ページナビ */
+.page-nav { margin: 2.0em 0; }
+
+.page-prev, .page-next, .page-back { display: block; border-top: 1px solid #fff; text-align: left; color: #fff; }
+.page-prev a, .page-next a, .page-back a { position: relative; display: block; padding: 1.5em 3.5em 1.5em 70px; background: url("../img/icon-arrow-w-l.png") 2% center no-repeat; background-size: 20px 21px; line-height: 1.6; text-decoration: none; color: #fff; }
+.page-prev a:hover, .page-next a:hover, .page-back a:hover { color: #3fb7eb; }
+
+.page-next { text-align: right; }
+.page-next a { padding: 1.5em 70px 1.5em 3.5em; background: url("../img/icon-arrow-w-r.png") 98% center no-repeat; background-size: 20px 21px; }
+
+.page-back { text-align: center; border-bottom: 1px solid #eeeeee; }
+.page-back a { padding: 1.5em; background: none; }
+
+@media screen and (min-width: 769px) { /* 記事日付 */
+  .post-meta { margin-top: 2.0em; }
+  .post-meta li { width: auto; padding: 5px 10px 5px; }
+  .post-meta li.cat { margin-left: auto; }
+  /* 記事ヘッダー */
+  .post-header { margin: 10px auto 30px; min-width: 80%; padding: 0 2%; }
+  .post-header .description { font-size: 1.375rem; padding: 1.0em; }
+  /* タグスタイル */
+  .post-body { padding: 0 2%; margin: 80px 0; /* 見出し */ }
+  .post-body h2 { font-size: 1.375rem; margin-top: 1.0em; } }
+@media screen and (min-width: 769px) and (min-width: 769px) { .post-body h2 { padding: 1.0em 5px 5px; } }
+@media screen and (min-width: 769px) { .post-body h3 { font-size: 1.25rem; }
+  .post-body h4 { font-size: 1.125rem; }
+  .post-body h5 { font-size: 1.125rem; }
+  .post-body p { font-size: 1rem; }
+  .post-body dl { margin: 1.5em 0 0; font-size: 1rem; }
+  .post-body dl dt { padding: 18px 0 0 20px; }
+  .post-body dl dt::before { left: 0; }
+  .post-body dl dd { padding: 18px 0 18px 20px; }
+  .post-footer { padding-top: 60px; }
+  /* ページナビ */
+  .page-nav { margin: 4.0em 0; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+  .page-prev, .page-next, .page-back { display: flex; }
+  .page-prev a, .page-next a, .page-back a { padding: 1.5em 1.5em 1.5em 70px; width: 100%; }
+  .page-prev a::before, .page-next a::before, .page-back a::before { content: attr(data-text); display: block; position: absolute; font-size: 16px; top: -30px; }
+  .page-prev { width: 48%; margin-right: auto; }
+  .page-prev a::before { left: 5px; }
+  .page-next { width: 48%; margin-left: auto; }
+  .page-next a { padding: 1.5em 70px 1.5em 1.5em; }
+  .page-next a::before { left: auto; right: 5px; }
+  .page-back { width: 100%; }
+  .page-back a { background: none; padding: 1.5em; } }

@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* キービジュアル */
+.mainvisual { position: relative; overflow: hidden; width: 100%; text-align: center; z-index: -900; }
+.mainvisual img { position: fixed; object-fit: cover; min-width: 100%; min-height: 100vh; width: auto; height: 100%; left: 0; right: 0; top: 0; z-index: -1; }
+
+/* 見出し */
+.section-tit { font-size: 1.375rem; position: relative; padding: .6em 0; letter-spacing: 3px; }
+.section-tit::before { content: ""; display: block; height: 1px; width: 130px; position: absolute; top: 0; left: 50%; margin-left: -65px; background-color: #26a2b7; }
+.section-tit:not(:first-child) { margin-top: 2.5em; }
+.section-tit span { display: inline-block; }
+
+/* サブタイトル */
+.sub-tit { text-align: left; font-size: 1.25rem; line-height: 1.4; position: relative; color: #26a2b7; padding-left: 30px; margin-top: 2.0em; }
+.sub-tit span { display: inline-block; }
+.sub-tit::before, .sub-tit::after { position: absolute; display: inline-block; content: ""; width: 18px; height: 18px; border-style: solid; border-width: 1px; }
+.sub-tit::before { content: ""; border-color: #26a2b7; top: 0; left: 8px; }
+.sub-tit::after { content: ""; border-color: #4fc6da; top: 8px; left: 0; }
+.sub-tit.cogao { color: #231714; }
+.sub-tit.cogao::before { content: ""; border-color: #231714; }
+.sub-tit.cogao::after { content: ""; border-color: #543730; }
+
+/* テーブル */
+.table-list { min-width: 100%; border-top: 1px solid #ccc; text-align: left; }
+.table-list th, .table-list td { vertical-align: top; border: none; background-color: #fff; color: #333333; font-size: 18px; }
+.table-list tr { border-bottom: 1px dotted #ccc; }
+.table-list tr:last-child { border-bottom: 1px solid #ccc; }
+.table-list tr.location { border-top: 1px dotted #ccc; }
+
+@media screen and (max-width: 640px) { .table-list th, .table-list td, .table-list tr { display: block; padding: 10px 5px; font-size: 16px; } }
+.sub-tit2 { text-align: left; font-size: 1.125rem; line-height: 1.4; position: relative; margin-top: 2.0em; }
+
+/* gradation文字 */
+.gradation-txt { color: #5699e8; background: -webkit-linear-gradient(0deg, #5699e8, #87d1f3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: "Times New Roman", "serif", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "メイリオ", Meiryo; font-weight: bold; line-height: 1.4; }
+.gradation-txt.pxlarge { font-size: 1.75rem; }
+.gradation-txt span { display: inline-block; }
+
+/* 本文 */
+.contents-body p { font-size: 0.875rem; line-height: 1.6; text-align: left; margin-top: 1.5em; }
+
+.description { font-size: 18px !important; text-align: center !important; margin-top: 1.5em; }
+
+.section-in { margin-top: 0; padding: 3.0em 4%; }
+@media screen and (min-width: 960px) { .section-in { padding: 4.0em 4%; } }
+
+/* 〇写真 */
+.circle-photo { width: 210px; height: 210px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; overflow: hidden; margin: 1.0em auto; }
+
+/* layout
+--------------------------------*/
+#about-us #contents, #our-business #contents, #material #contents, #archive #contents, #pages #contents, #single #contents, #contact #contents, #thanks #contents, #confirm #contents { width: 100%; height: 100%; margin: 0 auto; text-align: center; position: relative; overflow: hidden; z-index: 100; top: 10vh; }
+@media screen and (min-width: 769px) { #about-us #contents, #our-business #contents, #material #contents, #archive #contents, #pages #contents, #single #contents, #contact #contents, #thanks #contents, #confirm #contents { top: 120px; } }
+
+/* 会社情報
+--------------------------------*/
+/* 事業紹介
+--------------------------------*/
+#products .imgblock { margin: 30px auto; max-width: 500px; }
+
+.list-box { margin-top: 30px; }
+
+/* アンカーリンク */
+.anchor-link { white-space: nowrap; margin: 0 auto 40px; text-align: center; max-width: 1180px; }
+.anchor-link li { display: block; position: relative; width: 100%; -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.3); box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.3); }
+.anchor-link li + li { margin-top: 10px; }
+.anchor-link li a { position: relative; display: block; padding: 15px 1em; color: #fff; font-size: 1.25rem; line-height: 1; text-transform: uppercase; text-decoration: none; background: #5699e8; background: -moz-linear-gradient(left, #5699e8 0%, #87d1f3 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%, #5699e8), color-stop(100%, #87d1f3)); background: -webkit-linear-gradient(left, #5699e8 0%, #87d1f3 100%); background: linear-gradient(to right, #5699e8 0%, #87d1f3 100%); }
+.anchor-link li a::after { position: absolute; top: 0; left: 0; content: attr(data-hover); display: block; width: 100%; padding: 15px 1em; transition: .3s ease-in-out; opacity: 0; letter-spacing: -1px; }
+.anchor-link li a span { display: block; transition: .3s ease-in-out; }
+.anchor-link li a:hover::after, .anchor-link li a:focus::after { opacity: 1; }
+.anchor-link li a:hover span, .anchor-link li a:focus span { opacity: 0; }
+.anchor-link li a.green { background: #26a2b7; background: -moz-linear-gradient(left, #26a2b7 0%, #4ad3d1 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%, #26a2b7), color-stop(100%, #4ad3d1)); background: -webkit-linear-gradient(left, #26a2b7 0%, #4ad3d1 100%); background: linear-gradient(to right, #26a2b7 0%, #4ad3d1 100%); }
+.anchor-link li::after { content: ""; display: block; position: absolute; top: 50%; right: 5px; width: 10px; height: 10px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: translateX(-50%) rotate(135deg); margin-top: -5px; }
+
+/* ブランド
+--------------------------------*/
+#brand .brand-logo { display: block; max-width: 300px; margin: 0 auto 1.5em; }
+
+/* 原料紹介
+--------------------------------*/
+#material .brand-logo { display: block; max-width: 500px; margin: auto; }
+#material .block1 { margin: 30px auto; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-flex-direction: column; flex-direction: column; }
+#material .block1 div + div { margin-top: 15px; }
+#material .block2 .col { margin-top: 30px; }
+#material .block2 .col + .col { margin-top: 15px; }
+#material .block3 { margin-top: 2.0em; }
+#material .block3 .txt-center { display: block; margin: 10px auto 20px; text-align: center; font-size: 12px; }
+#material .col-in img + img { margin-top: 20px; }
+
+/* ブランドカラー別 */
+#material-nutroxsun .section-tit { letter-spacing: 0; background: #ffffff; background: -moz-linear-gradient(left, #ffffff 0%, #da5122 50%, #ffffff 100%); background: -webkit-linear-gradient(left, #ffffff 0%, #da5122 50%, #ffffff 100%); background: linear-gradient(to right, #ffffff 0%, #da5122 50%, #ffffff 100%); color: #fff; text-shadow: 1px 1px 1px black; }
+#material-nutroxsun .section-tit::before { content: ""; display: none; }
+#material-nutroxsun .sub-tit { color: #da5122; }
+#material-nutroxsun .sub-tit::before { content: ""; border-color: #da5122; }
+#material-nutroxsun .sub-tit::after { content: ""; border-color: #e78462; }
+#material-nutroxsun .list.circle li::before { content: ""; border: 4px solid #da5122; }
+#material-nutroxsun .list.number { counter-reset: mynmb; }
+#material-nutroxsun .list.number li::before { counter-increment: mynmb; content: counter(mynmb) "."; color: #da5122; }
+
+#material-morosil .section-tit { letter-spacing: 0; background: #ffffff; background: -moz-linear-gradient(left, #ffffff 0%, #c91c23 50%, #ffffff 100%); background: -webkit-linear-gradient(left, #ffffff 0%, #c91c23 50%, #ffffff 100%); background: linear-gradient(to right, #ffffff 0%, #c91c23 50%, #ffffff 100%); color: #fff; text-shadow: 1px 1px 1px black; }
+#material-morosil .section-tit::before { content: ""; display: none; }
+#material-morosil .sub-tit { color: #c91c23; }
+#material-morosil .sub-tit::before { content: ""; border-color: #c91c23; }
+#material-morosil .sub-tit::after { content: ""; border-color: #e64c52; }
+#material-morosil .list.circle li::before { content: ""; border: 4px solid #c91c23; }
+#material-morosil .list.number { counter-reset: mynmb; }
+#material-morosil .list.number li::before { counter-increment: mynmb; content: counter(mynmb) "."; color: #c91c23; }
+#material-morosil .table-list { border-top: 1px solid #c91c23 !important; }
+#material-morosil .table-list th, #material-morosil .table-list td, #material-morosil .table-list tr { padding: 10px 5px; }
+
+#material-flavo .section-tit { letter-spacing: 0; background: #ffffff; background: -moz-linear-gradient(left, #ffffff 0%, #f4e326 50%, #ffffff 100%); background: -webkit-linear-gradient(left, #ffffff 0%, #f4e326 50%, #ffffff 100%); background: linear-gradient(to right, #ffffff 0%, #f4e326 50%, #ffffff 100%); color: #fff; text-shadow: 1px 1px 1px black; }
+#material-flavo .section-tit::before { content: ""; display: none; }
+#material-flavo .sub-tit { color: #f4e326; }
+#material-flavo .sub-tit::before { content: ""; border-color: #f4e326; }
+#material-flavo .sub-tit::after { content: ""; border-color: #f8ec6f; }
+#material-flavo .list.circle li::before { content: ""; border: 4px solid #f4e326; }
+#material-flavo .list.number { counter-reset: mynmb; }
+#material-flavo .list.number li::before { counter-increment: mynmb; content: counter(mynmb) "."; color: #f4e326; }
+
+#material-beaulixir .section-tit { letter-spacing: 0; background: #ffffff; background: -moz-linear-gradient(left, #ffffff 0%, #18783a 50%, #ffffff 100%); background: -webkit-linear-gradient(left, #ffffff 0%, #18783a 50%, #ffffff 100%); background: linear-gradient(to right, #ffffff 0%, #18783a 50%, #ffffff 100%); color: #fff; text-shadow: 1px 1px 1px black; }
+#material-beaulixir .section-tit::before { content: ""; display: none; }
+#material-beaulixir .sub-tit { color: #18783a; }
+#material-beaulixir .sub-tit::before { content: ""; border-color: #18783a; }
+#material-beaulixir .sub-tit::after { content: ""; border-color: #25b859; }
+#material-beaulixir .list.circle li::before { content: ""; border: 4px solid #18783a; }
+#material-beaulixir .list.number { counter-reset: mynmb; }
+#material-beaulixir .list.number li::before { counter-increment: mynmb; content: counter(mynmb) "."; color: #18783a; }
+
+#material-zeropollution .section-tit { letter-spacing: 0; background: #ffffff; background: -moz-linear-gradient(left, #ffffff 0%, #2387c4 50%, #ffffff 100%); background: -webkit-linear-gradient(left, #ffffff 0%, #2387c4 50%, #ffffff 100%); background: linear-gradient(to right, #ffffff 0%, #2387c4 50%, #ffffff 100%); color: #fff; text-shadow: 1px 1px 1px black; }
+#material-zeropollution .section-tit::before { content: ""; display: none; }
+#material-zeropollution .sub-tit { color: #2387c4; }
+#material-zeropollution .sub-tit::before { content: ""; border-color: #2387c4; }
+#material-zeropollution .sub-tit::after { content: ""; border-color: #53abe0; }
+#material-zeropollution .list.circle li::before { content: ""; border: 4px solid #2387c4; }
+#material-zeropollution .list.number { counter-reset: mynmb; }
+#material-zeropollution .list.number li::before { counter-increment: mynmb; content: counter(mynmb) "."; color: #2387c4; }
+
+#material-tetrasod .section-tit { letter-spacing: 0; background: #ffffff; background: -moz-linear-gradient(left, #ffffff 0%, #BF9224 50%, #ffffff 100%); background: -webkit-linear-gradient(left, #ffffff 0%, #BF9224 50%, #ffffff 100%); background: linear-gradient(to right, #ffffff 0%, #BF9224 50%, #ffffff 100%); color: #fff; text-shadow: 1px 1px 1px black; }
+#material-tetrasod .section-tit::before { content: ""; display: none; }
+#material-tetrasod .sub-tit { color: #BF9224; }
+#material-tetrasod .sub-tit::before {content: "";border-color: #97741c;}
+#material-tetrasod .sub-tit::after {content: "";border-color: #BF9224;}
+#material-tetrasod .list.circle li::before { content: ""; border: 4px solid #BF9224; }
+#material-tetrasod .list.number { counter-reset: mynmb; }
+#material-tetrasod .list.number li::before { counter-increment: mynmb; content: counter(mynmb) "."; color: #BF9224; }
+
+#material-metabolaid .section-tit { letter-spacing: 0; background: #ffffff; background: -moz-linear-gradient(left, #ffffff 0%, #cd3d37 50%, #ffffff 100%); background: -webkit-linear-gradient(left, #ffffff 0%, #cd3d37 50%, #ffffff 100%); background: linear-gradient(to right, #ffffff 0%, #cd3d37 50%, #ffffff 100%); color: #fff; text-shadow: 1px 1px 1px black; }
+#material-metabolaid .section-tit::before { content: ""; display: none; }
+#material-metabolaid .sub-tit { color: #cd3d37; }
+#material-metabolaid .sub-tit::before {content: "";border-color: #97741c;}
+#material-metabolaid .sub-tit::after {content: "";border-color: #cd3d37;}
+#material-metabolaid .list.circle li::before { content: ""; border: 4px solid #cd3d37; }
+#material-metabolaid .list.number { counter-reset: mynmb; }
+#material-metabolaid .list.number li::before { counter-increment: mynmb; content: counter(mynmb) "."; color: #cd3d37; }
+
+.material-link { max-width: 1260px; margin: 0 auto 30px; overflow: hidden; position: relative; }
+
+.next-btn { display: none; position: absolute; top: 0; right: 0; width: 20px; height: 60px; line-height: 60px; background: rgba(0, 0, 0, 0.7); color: #fff; }
+@media screen and (max-width: 640px) { .next-btn { display: block; } }
+
+.material-warp::-webkit-scrollbar { width: 8px; border-radius: 8px; background: #eee; }
+.material-warp::-webkit-scrollbar:horizontal { height: 8px; border-radius: 8px; }
+.material-warp::-webkit-scrollbar-button { width: 8px; height: 8px; background: #eee; }
+.material-warp::-webkit-scrollbar-piece { background: #eee; }
+.material-warp::-webkit-scrollbar-piece:start { background: #eee; }
+.material-warp::-webkit-scrollbar-thumb { background: rgba(51, 51, 51, 0.5); border-radius: 8px; }
+.material-warp::-webkit-scrollbar-corner { background: rgba(51, 51, 51, 0.5); border-radius: 8px; }
+
+.material-warp { width: 100%; height: 60px; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
+.material-warp ul { margin: 0; max-width: 100%; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
+.material-warp ul li { display: flex; align-items: center; width: 239px; min-height: 60px; background-color: #fff; }
+.material-warp ul li + li { margin-left: 1px; }
+.material-warp ul li a { background-color: #fff; display: block; padding: 10px; text-decoration: none; }
+.material-warp ul li a img { width: 90%; min-width: 180px; height: auto; }
+.material-warp ul li a:hover { background-color: antiquewhite; }
+.material-warp ul li a.active { background-color: antiquewhite; }
+@media screen and (max-width: 640px) { .material-warp { height: 60px; }
+  .material-warp::-webkit-scrollbar { display: none; -ms-overflow-style: none; scrollbar-width: none; } }
+
+/* アンケートリスト */
+.qt-list { margin-top: 30px; display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+.qt-list li { width: 160px; margin: 0 5px 20px; }
+.qt-list li span { display: inline-block; font-size: 0.875rem; margin-top: 1.0em; line-height: 1.5; }
+
+/* DL */
+.pp-block { text-align: left; line-height: 1.6; }
+.pp-block dt { margin-top: 1.5em; padding: 14px 15px 5px; border-left: 1px solid #fff; position: relative; }
+.pp-block dt::before { content: ""; position: absolute; display: inline-block; top: 10px; left: -10px; width: 30px; height: 1px; background-color: #fff; }
+.pp-block dd { padding: 5px 15px; }
+
+@media screen and (min-width: 769px) { /* 見出し */
+  .section-tit { font-size: 1.875rem; }
+  .section-tit:not(:first-child) { margin-top: 3.0em; }
+  /* gradation文字 */
+  .gradation-txt.pxlarge { font-size: 2.25rem; }
+  /* 本文 */
+  .contents-body p { font-size: 1rem; margin-top: 2.0em; }
+  .description { font-size: 20px !important; }
+  /* 〇写真 */
+  .circle-photo { width: 300px; height: 300px; margin: 0; }
+  /* アンカーリンク */
+  .anchor-link { margin: 0 auto 40px; padding: 0 4%; }
+  .anchor-link li { display: inline-block; width: 48%; }
+  .anchor-link li + li { margin-top: 0; margin-left: 2%; }
+  /* 原料紹介 --------------------------------*/
+  .material-link { margin: 0 auto 70px; }
+  .material-warp ul li { width: -webkit-calc(25% - 1px); width: calc(25% - 1px); margin-left: 1px; }
+  #material .brand-logo { display: block; max-width: 500px; margin: auto; }
+  #material .block1 { margin: 30px auto; -webkit-flex-direction: row; flex-direction: row; }
+  #material .block1 div + div { margin-top: 0; margin-left: 20px; } }

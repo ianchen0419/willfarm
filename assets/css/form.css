@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/*メールフォーム
+--------------------------------------*/
+form { min-width: 100%; padding: 40px 2%; }
+
+.form-box { width: 100%; }
+.form-box dt, .form-box dd { text-align: left; margin-bottom: 10px; font-size: 1rem; }
+.form-box dd { margin-bottom: 30px; }
+
+.full { width: 100% !important; }
+
+.require { display: inline-block; color: #ff5400; font-size: 11px; margin-left: 15px; }
+
+input[type="text"], input[type="url"], input[type="email"], input[type="password"], select, textarea { width: 100%; font-family: inherit; padding: 11px 15px; border: 1px solid #e3e3e3; border-radius: 4px; font-size: 17px; background: #fff; }
+input[type="text"].short, input[type="url"].short, input[type="email"].short, input[type="password"].short, select.short, textarea.short { width: 100%; }
+
+input, select { -webkit-transition: all 0.3s; transition: all 0.3s; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+
+input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus { border-color: #3fb7eb; background: #fdfceb; }
+
+select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+select::-ms-expand { display: none; }
+select:-moz-focusring { color: transparent; text-shadow: 0 0 0 #fff; }
+select.select-parts { position: relative; }
+
+.select-label { position: relative; }
+.select-label::after { display: block; position: absolute; top: 50%; right: 14px; content: ""; border-right: 2px solid #004986; border-bottom: 2px solid #004986; pointer-events: none; z-index: 2; vertical-align: middle; width: 8px; height: 8px; -webkit-transform: rotate(45deg); transform: rotate(45deg); margin-top: -4px; }
+
+/* placeholder: Google Chrome, Safari, Opera 15+, Android, iOS */
+input::-webkit-input-placeholder { color: #aaa; }
+
+/* placeholder: Firefox 19+ */
+input::-moz-placeholder { color: #aaa; }
+
+/* placeholder: IE 10+ */
+input:-ms-input-placeholder { color: #aaa; }
+
+/* .checkbox, .radio */
+/* placeholder: Google Chrome, Safari, Opera 15+, Android, iOS */
+input:focus::-webkit-input-placeholder { color: transparent; }
+
+/* placeholder: Firefox 19+ */
+input:focus::-moz-placeholder { color: transparent; }
+
+/* placeholder: IE 10+ */
+input:focus:-ms-input-placeholder { color: transparent; }
+
+/* リスト縦-横並び */
+.mw_wp_form .vertical-item + .vertical-item, .mw_wp_form .horizontal-item + .horizontal-item { margin: 0 !important; }
+
+.mwform-checkbox-field, .mwform-radio-field { position: relative; width: 100%; }
+.mwform-checkbox-field label, .mwform-radio-field label { position: relative; display: inline-block; width: 100%; }
+
+/* checkbox-radio */
+.checkbox-input, .radio-input { opacity: 0; z-index: -1; }
+
+.mwform-checkbox-field-text, .mwform-radio-field-text { cursor: pointer; display: inline-block; position: relative; font-size: 1rem; padding-left: 42px; z-index: 1; left: -26px; margin: 12px 0; width: -webkit-calc(100% - 42px); width: calc(100% - 42px); }
+.mwform-checkbox-field-text::before, .mwform-radio-field-text::before { content: ""; display: block; position: absolute; border: 1px solid #e3e3e3; background: #fff; top: -5px; left: 0; width: 30px; height: 30px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+
+.mwform-radio-field-text::before { -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
+
+input[type="checkbox"]:checked + .mwform-checkbox-field-text::after, input[type="radio"]:checked + .mwform-radio-field-text::after { content: url("../img/input-check.png"); display: block; position: absolute; text-align: center; top: -5px; left: 0; width: 30px; height: 30px; border: 1px solid #3fb7eb; background: #fff; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+
+input[type="radio"]:checked + .mwform-radio-field-text::after { -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
+
+input[type="checkbox"]:hover + .mwform-checkbox-field-text::before, input[type="checkbox"]:focus + .mwform-checkbox-field-text::before, input[type="radio"]:hover + .mwform-radio-field-text::before, input[type="radio"]:focus + .mwform-radio-field-text::before { border: 1px solid #3fb7eb; background: #fdfceb; }
+
+/* 送信ボタン */
+input[type="submit"] { min-width: 180px; line-height: 1; padding: 16px 30px; margin-top: 10px; font-size: 20px; position: relative; display: inline-block; vertical-align: middle; text-align: center; text-decoration: none; color: #fff; background: #2886e4; background: -moz-linear-gradient(left, #2886e4 0%, #429ef9 50%, #2886e4 100%); background: -webkit-linear-gradient(left, #2886e4 0%, #429ef9 50%, #2886e4 100%); background: linear-gradient(to right, #2886e4 0%, #429ef9 50%, #2886e4 100%); -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5); box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5); }
+input[type="submit"].btn-back { background: #eee; color: #414141; min-width: 100px; display: inline-block; }
+input[type="submit"]:hover, input[type="submit"]:focus { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+
+.form-bottom { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; margin: 30px auto; }
+.form-bottom input + input { margin-left: 15px; }
+
+@media screen and (min-width: 769px) { /*メールフォーム --------------------------------------*/
+  form { padding: 40px 2%; }
+  .form-box { width: 100%; }
+  .form-box dt { float: left; clear: left; width: 200px; padding: 10px; border-top: 1px solid  #e3e3e3; }
+  .form-box dd { padding: 10px 0 10px 200px; margin-bottom: 30px; } }
