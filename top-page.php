@@ -23,16 +23,6 @@
 			<span><img src="<?php echo get_theme_file_uri( '/assets/img/material-logo_metabolaid.png' ); ?>" alt="metabolaid"/></span>
 			</a></li>
 		</ul>
-		
-		<ul class="list-box">
-		<li class="willc"><h3 title="オリシジナルブランドWILLCOSME">Personal care<span>Willcosme</span></h3><a href="<?php echo home_url('/our-business/#willcosme'); ?>" class="more-link"></a></li>
-			<li><a href="https://willcosme.co.jp/brand/#cogao" target="new"><img src="<?php echo get_theme_file_uri( '/assets/img/top-brand_01.jpg' ); ?>" alt="cogao"/>
-			<span><img src="<?php echo get_theme_file_uri( '/assets/img/logo-cogao.png' ); ?>" alt="cogao"/></span>
-			</a></li>
-			<li><a href="https://willcosme.co.jp/brand/#nutroxsun" target="new"><img src="<?php echo get_theme_file_uri( '/assets/img/top-brand_02.jpg' ); ?>" alt="nutroxsun"/>
-			<span><img src="<?php echo get_theme_file_uri( '/assets/img/logo_bl-sun.png' ); ?>" alt="nutroxsun"/></span>
-			</a></li>
-	</ul>
 	
 	</div><!--//section-in-->
 	

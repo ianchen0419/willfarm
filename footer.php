@@ -4,14 +4,6 @@
 <div class="inner">
 
 <div class="footer-right">
-	<p class="txt1">オリジナルブランド<span>「ウィルコスメ」</span></p>
-	<p class="txt2">選び抜かれた素材で作られた<br class="sp-only">ナチュラルスキンケア</p>
-	<div class="shop-link">
-		<a href="https://willcosme.net/" target="new">
-		<img src="<?php echo get_theme_file_uri( '/assets/img/willcosme-logo.png' ); ?>" alt="willcosme" class="shop-logo">
-		<div class="link">ご購入はこちら</div>
-		</a>
-	</div>
 </div><!--//footer-right-->
 
 <div class="footer-left">
@@ -43,7 +35,6 @@
 			<li><a href="<?php echo home_url('/story/'); ?>">ストーリー</a></li>
 			<li><a href="<?php echo home_url('/our-business/'); ?>">事業内容</a></li>
 			<li><a href="<?php echo home_url('/material/'); ?>">原料紹介</a></li>
-			<li><a href="<?php echo home_url('/our-business/#willcosme'); ?>">ウィルコスメ</a></li>
 			<li><a href="<?php echo home_url('/info/'); ?>">新着情報</a></li>
 			<li><a href="<?php echo home_url('/exhi/'); ?>">イベント</a></li>
 			<li class="mail"><a href="<?php echo home_url('/contact/'); ?>">資料請求・お問い合わせ</a></li>

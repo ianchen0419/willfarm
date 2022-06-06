@@ -39,12 +39,7 @@ $ennotation = SCF::get('en-notation');
 	<div class="content-header">
 		<h1 hidden class="content-tit" data-text="<?php echo $ennotation; ?>"><?php the_title(); ?></h1>
 	</div>
-<?php if(is_page('our-business')) : ?>
-	<ul class="anchor-link">
-	<li><a href="#products" data-hover="機能性原料の総合プロデュース"><span>Products</span></a></li>
-	<li><a href="#willcosme" data-hover="オリシジナルブランド「WILLCOSME」" class="green"><span>Personal care Willcosme</span></a></li>
-	</ul>
-<?php endif; ?>
+
 	
 <div class="contents-body">
 <div class="inner">
